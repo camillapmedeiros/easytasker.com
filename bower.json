@@ -1,0 +1,11 @@
+{
+  "name": "easy.tasker",
+  "private": true,
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "normalize-css": "normalize.css#^5.0.0"
+  },
+  "devDependencies": {
+    "components-font-awesome": "^4.7.0"
+  }
+}
