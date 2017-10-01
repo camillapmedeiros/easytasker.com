@@ -13,9 +13,11 @@
   "scripts": {
     "postinstall": "bower install",
     "prestart": "npm install",
-    "build": "rm -rf dist && mkdir dist && cp -rf src/* dist && cp -rf bower_components dist && rm -rf sass",
+    "css": "node-sass -r --output-style compressed src/css/style.sass -o dist",
+    "css:watch": "npm run css && node-sass src/css/style.sass -wo dist",
+    "build": "rm -rf dist && mkdir dist && cp -rf src/* dist && cp -rf bower_components dist && rm -rf dist/css/style.sass",
     "serve": "browser-sync start -s dist -f dist",
     "watch": "onchange src -- npm run build",
-    "start": "run-p build watch serve"
+    "start": "run-p css:watch build watch serve"
   }
 }

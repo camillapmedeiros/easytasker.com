@@ -11,11 +11,14 @@ $borderColor: 	#eeeeee
 	display: inline-block
 	text-align: center
 
-@mixin mainLogin
-	position: relative
+@mixin main
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
 	width: 100%
 	max-width: 320px
-	height: 100vh
 	display: flex
 	justify-content: center
 	align-content: center
@@ -65,7 +68,7 @@ a
 /* Pages =========================== */
 /* Login */
 .main
-	@include mainLogin
+	@include main
 
 	.main--card
 		width: 100%
@@ -167,8 +170,6 @@ a
 					display: table-cell
 					vertical-align: middle
 
-@media (min-width: 640px) and (max-width: 1170px)
-@media (max-width: 640px)
 
 /* Create new team */
 .body--new-team
@@ -176,7 +177,7 @@ a
 	overflow: hidden
 
 	.main
-		@include mainLogin
+		@include main
 		max-width: 435px
 
 		.main--header
@@ -274,8 +275,5 @@ a
 						color: white
 						background: $mainColor
 						border: 1px solid transparent
-
-@media (min-width: 640px) and (max-width: 1170px)
-@media (max-width: 640px)
 
 /* Main screen */
